@@ -14,7 +14,7 @@ namespace DDD.CarRental.Core.ApplicationLayer.Mappers
         {
             return new DriverDto()
             {
-                DriverId = d.DriverId,
+                Id = d.Id,
                 LicenceNumber = d.LicenceNumber,
                 FirstName = d.FirstName,
                 LastName = d.LastName,
@@ -25,7 +25,7 @@ namespace DDD.CarRental.Core.ApplicationLayer.Mappers
         {
             return new CarDto()
             {
-                CarId = car.CarId,
+                Id = car.Id,
                 RegistrationNumber = car.RegistrationNumber,
                 CurrentDistance = car.CurrentDistance,
                 TotalDistance = car.TotalDistance,
@@ -37,7 +37,7 @@ namespace DDD.CarRental.Core.ApplicationLayer.Mappers
         {
             return new RentalDto()
             {
-                RentalId = r.RentalId,
+                Id = r.Id,
                 Started = r.Started,
                 Finished = r.Finished,
                 Total = r.Total.Amount,

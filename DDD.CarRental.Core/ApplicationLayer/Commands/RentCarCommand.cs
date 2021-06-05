@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DDD.CarRental.Core.ApplicationLayer.Commands
 {
-    class RentCarCommand
+    public class RentCarCommand
     {
         public long RentalId { get; set; }
         public DateTime Started { get; set; }

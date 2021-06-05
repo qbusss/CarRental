@@ -8,5 +8,18 @@ namespace DDD.CarRental.Core.InfrastructureLayer.EF
         public RentalRepository(CarRentalDbContext context)
             : base(context)
         { }
+
+        public void Insert(Rental rental)
+        {
+            _context.Rentals.Add(rental);
+            _context.SaveChanges();
+        }
+
+        public Rental Get(long id)
+        {
+            return _context.Rentals
+                .Where(d => d.Id == id)
+                .FirstOrDefault();
+        }
     }
 }

@@ -18,14 +18,22 @@ namespace DDD.CarRental.Core.ApplicationLayer.Commands.Handlers
         private ICarRentalUnitOfWork _unitOfWork;
         private DiscountPolicyFactory _discountPolicyFactory;
         private RentalFactory _rentalFactory;
-        private FreeMinutesFactory _freeMinutesFactory;
+        private FreeMinutesPolicyFactory _freeMinutesFactory;
+        private IPositionService _positionService;
 
-        public CommandHandler(ICarRentalUnitOfWork _unitOfWork, DiscountPolicyFactory discountPolicyFactory, RentalFactory rentalFactory, FreeMinutesFactory freeMinutesFactory)
+        public CommandHandler(
+            ICarRentalUnitOfWork _unitOfWork, 
+            DiscountPolicyFactory discountPolicyFactory, 
+            RentalFactory rentalFactory,
+            FreeMinutesPolicyFactory freeMinutesFactory,
+            IPositionService positionService,
+        )
         {
             _unitOfWork = unitOfWork;
             _discountPolicyFactory = discountPolicyFactory;
             _rentalFactory = rentalFactory;
             _freeMinutesFactory = freeMinutesFactory;
+            _positionService = positionService;
         }
 
         public void Execute(CreateCarCommand command)
@@ -35,12 +43,13 @@ namespace DDD.CarRental.Core.ApplicationLayer.Commands.Handlers
             car = this._unitOfWork.CarRepository.GetCarByRegistrationNumber(command.RegistrationNumber);
             if (car != null) throw new Exception($"Car '{command.RegistrationNumber}' already exists.");
 
-            car = new Car(command.CarId, command.RegistrationNumber, command.TotalDistance, command.Status);
+           
+            car = new Car(command.CarId, command.RegistrationNumber);
             this._unitOfWork.CarRepository.Insert(car);
             this._unitOfWork.Commit();
         }
 
-        public void Execute(CreatePlayerCommand command)
+        public void Execute(CreateDriverCommand command)
         {
             Driver driver = this._unitOfWork.DriverRepository.Get(command.DriverId);
             if (driver != null) throw new Exception($"Driver '{command.DriverId}' already exists.");
@@ -79,10 +88,15 @@ namespace DDD.CarRental.Core.ApplicationLayer.Commands.Handlers
 
             car.ChangeStatus();
 
+           
+            // ToDo implement change position
+           _this._positionService.GeneratePosition(car.Id);
+
             IFreeMinutesPolicy policy = this._freeMinutesFactory.Create(Driver driver);
             driver.AddFreeMinutes(policy);
 
-            rental.StopRental(command.Finished)
+
+            rental.StopRental(command.Finished, command.UnitPrice, driver.FreeMinutes);
         }
     }
 }

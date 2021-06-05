@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.CarRental.ConsoleTest\\DDD.CarRental.ConsoleTest.csproj": {}
+    "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.CarRental.ConsoleTest\\DDD.CarRental.ConsoleTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.CarRental.ConsoleTest\\DDD.CarRental.ConsoleTest.csproj": {
+    "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.CarRental.ConsoleTest\\DDD.CarRental.ConsoleTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.CarRental.ConsoleTest\\DDD.CarRental.ConsoleTest.csproj",
+        "projectUniqueName": "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.CarRental.ConsoleTest\\DDD.CarRental.ConsoleTest.csproj",
         "projectName": "DDD.CarRental.ConsoleTest",
-        "projectPath": "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.CarRental.ConsoleTest\\DDD.CarRental.ConsoleTest.csproj",
+        "projectPath": "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.CarRental.ConsoleTest\\DDD.CarRental.ConsoleTest.csproj",
         "packagesPath": "C:\\Users\\kubci\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.CarRental.ConsoleTest\\obj\\",
+        "outputPath": "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.CarRental.ConsoleTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kubci\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.CarRental.Core\\DDD.CarRental.Core.csproj": {
-                "projectPath": "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.CarRental.Core\\DDD.CarRental.Core.csproj"
+              "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.CarRental.Core\\DDD.CarRental.Core.csproj": {
+                "projectPath": "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.CarRental.Core\\DDD.CarRental.Core.csproj"
               }
             }
           }
@@ -74,14 +74,14 @@
         }
       }
     },
-    "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.CarRental.Core\\DDD.CarRental.Core.csproj": {
+    "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.CarRental.Core\\DDD.CarRental.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.CarRental.Core\\DDD.CarRental.Core.csproj",
+        "projectUniqueName": "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.CarRental.Core\\DDD.CarRental.Core.csproj",
         "projectName": "DDD.CarRental.Core",
-        "projectPath": "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.CarRental.Core\\DDD.CarRental.Core.csproj",
+        "projectPath": "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.CarRental.Core\\DDD.CarRental.Core.csproj",
         "packagesPath": "C:\\Users\\kubci\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.CarRental.Core\\obj\\",
+        "outputPath": "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.CarRental.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kubci\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -97,8 +97,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.SharedKernel\\DDD.SharedKernel.csproj": {
-                "projectPath": "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.SharedKernel\\DDD.SharedKernel.csproj"
+              "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.SharedKernel\\DDD.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.SharedKernel\\DDD.SharedKernel.csproj"
               }
             }
           }
@@ -144,14 +144,14 @@
         }
       }
     },
-    "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.SharedKernel\\DDD.SharedKernel.csproj": {
+    "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.SharedKernel\\DDD.SharedKernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.SharedKernel\\DDD.SharedKernel.csproj",
+        "projectUniqueName": "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.SharedKernel\\DDD.SharedKernel.csproj",
         "projectName": "DDD.SharedKernel",
-        "projectPath": "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.SharedKernel\\DDD.SharedKernel.csproj",
+        "projectPath": "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.SharedKernel\\DDD.SharedKernel.csproj",
         "packagesPath": "C:\\Users\\kubci\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.SharedKernel\\obj\\",
+        "outputPath": "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.SharedKernel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kubci\\AppData\\Roaming\\NuGet\\NuGet.Config",

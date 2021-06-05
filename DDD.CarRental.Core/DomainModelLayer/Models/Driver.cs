@@ -5,7 +5,7 @@ namespace DDD.CarRental.Core.DomainModelLayer.Models
 {
     public class Driver : Entity, IAggregateRoot
     {
-        public long DriverId { get; protected set; }
+
         public long LicenceNumber { get; protected set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

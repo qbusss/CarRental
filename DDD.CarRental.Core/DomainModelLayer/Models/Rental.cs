@@ -2,48 +2,52 @@
 using DDD.SharedKernel.DomainModelLayer.Implementations;
 using DDD.CarRental.Core.DomainModelLayer.Interfaces;
 using System;
-using System.Text;
+using System.Collections.Generic;
 
 namespace DDD.CarRental.Core.DomainModelLayer.Models
 {
-    public class Rental: Entity, IAggregateRoot
+    public class Rental : Entity, IAggregateRoot
     {
-        public long RentalId { get; protected set; }
+
         public DateTime Started { get; protected set; }
         public DateTime Finished { get; protected set; }
         public Money Total { get; protected set; }
+        public long CarId { get; protected set; }
+        public long DriverId { get; protected set; }
         private IDiscountPolicy _policy;
 
         protected Rental()
         { }
 
-
-        public void RegisterPolicy(IDiscountPolicy policy/*, int freeMinutes*/)
+        public Rental(long rentalId, long driverId, long carId, DateTime started)
+    : base(rentalId)
         {
-            this._policy = policy ?? throw new ArgumentNullException("Empty discount policy");
+            this.Started = started;
+            this.CarId = carId;
+            this.DriverId = driverId;
+            this.Total = Money.Zero;
+
+            this.AddDomainEvent(new RentalStartedDomainEvent(this));
         }
 
-        public void StopRental(DateTime finished, Money unitPrice)
-        {
-            // simple date walidation
-            if (finished < Started)
-                throw new Exception($"Exit date and time is earlier than enter date and time.");
 
-            // set visit status
+        public void RegisterPolicy(IDiscountPolicy policy)
+        {
+            this._policy = policy;// ?? throw new ArgumentNullException("Empty discount policy");
+        }
+
+        public void StopRental(DateTime finished, Money unitPrice, int freeMinutes)
+        {
+            if (finished < Started)
+                throw new Exception($"Finished date and time is earlier than startes date and time.");
+
             this.Finished = finished;
 
-            // calculate total
-            var timeInMinutes = (this.Finished.Value - this.Started).Minutes;// - freeMinutes;
+            var timeInMinutes = (this.Finished.Value - this.Started).Minutes - freeMinutes;
             Total = unitPrice.MultiplyBy(timeInMinutes);
 
-            // apply discount policy and recalculate total
-            if (this._policy != null)
-            {
-                Money discount = this._policy.CalculateDiscount(this.Total, timeInMinutes, unitPrice);
-                Total = (discount > Total) ? Money.Zero : Total - discount;
-            }
 
-            this.AddDomainEvent(new VisitFishedDomainEvent(this));
+            this.AddDomainEvent(new RentalFishedDomainEvent(this));
         }
 
         public int GetTimeInMinutes()

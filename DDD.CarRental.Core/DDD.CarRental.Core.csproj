@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <None Remove="ApplicationLayer\Commands\NewFile1.txt" />
+    <None Remove="DomainModelLayer\Models\NewFile1.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,8 +17,6 @@
 
   <ItemGroup>
     <Folder Include="ApplicationLayer\DomainEventHandlers\" />
-    <Folder Include="DomainModelLayer\Events\" />
-    <Folder Include="DomainModelLayer\Services\" />
   </ItemGroup>
 
   <ItemGroup>

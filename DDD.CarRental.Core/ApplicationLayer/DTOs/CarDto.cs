@@ -14,7 +14,7 @@ namespace DDD.CarRental.Core.ApplicationLayer.DTOs
 
     public class CarDto
     {
-        public long CarId { get; set; }
+        public long Id { get; set; }
         public string RegistrationNumber { get; set; }
         public Distance CurrentDistance { get; set; }
         public Distance TotalDistance { get; set; }

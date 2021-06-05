@@ -82,11 +82,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.SharedKernel\\DDD.SharedKernel.csproj",
+      "projectUniqueName": "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.SharedKernel\\DDD.SharedKernel.csproj",
       "projectName": "DDD.SharedKernel",
-      "projectPath": "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.SharedKernel\\DDD.SharedKernel.csproj",
+      "projectPath": "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.SharedKernel\\DDD.SharedKernel.csproj",
       "packagesPath": "C:\\Users\\kubci\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kubci\\Desktop\\CarRental\\DDD.SharedKernel\\obj\\",
+      "outputPath": "C:\\Users\\kubci\\Desktop\\projekty\\CarRental\\DDD.SharedKernel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kubci\\AppData\\Roaming\\NuGet\\NuGet.Config",

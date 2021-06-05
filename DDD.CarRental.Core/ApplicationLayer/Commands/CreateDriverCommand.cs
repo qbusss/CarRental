@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DDD.CarRental.Core.ApplicationLayer.Commands
 {
-    class CreateDriverCommand
+    public class CreateDriverCommand
     {
         public long DriverId { get; set; }
         public string LicenceNumber { get; set; }

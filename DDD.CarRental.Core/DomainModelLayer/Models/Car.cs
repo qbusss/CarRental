@@ -12,16 +12,37 @@ namespace DDD.CarRental.Core.DomainModelLayer.Models
 
     public class Car : Entity, IAggregateRoot
     {
-        public long CarId { get; protected set; }
+
         public string RegistrationNumber { get; protected set; }
         public Distance CurrentDistance { get; protected set; }
         public Distance TotalDistance { get; protected set; }
         public Position CurrentPosition { get; set; }
         public CarStatus Status { get; protected set; }
 
+        public Car(long carId, string registrationNumber, Position position)
+            : base(carId)
+        {
+            if (String.IsNullOrEmpty(registrationNumber)) throw new Exception("Car registration number is null or empty");
+
+            Distance initialDistance = new Distance();
+            Position position = new Position(0, 0);
+
+            RegistrationNumber = registrationNumber;
+            CurrentPosition = position;
+            CurrentDistance = initialDistance;
+            TotalDistance = initialDistance;
+            Status = CarStatus.Available;
+
+        }
+
         public void ChangeStatus()
         {
             this.Status = CarStatus.Available;
+        }
+
+        public void ChangeCurrentPosition(Position position)
+        {
+            this.CurrentPosition = position;
         }
     }
 

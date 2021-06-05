@@ -6,7 +6,7 @@ namespace DDD.CarRental.Core.ApplicationLayer.DTOs
 {
     public class DriverDto
     {
-        public long DriverId { get; set; }
+        public long Id { get; set; }
         public long LicenceNumber { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

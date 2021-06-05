@@ -31,8 +31,7 @@ namespace DDD.CarRental.Core.ApplicationLayer.Queries.Handlers
                 .AsNoTracking()
                 .ToList();
 
-            // mapowanie obiektów biznesowych na transferowe warto powierzyć maperom 
-            // (własnym - jak tutaj lub bibliotecznym, np. Automaper)
+
             List<DriverDto> result =drivers.Select(r => this._mapper.Map(r)).ToList();
 
             return result;
@@ -45,8 +44,6 @@ namespace DDD.CarRental.Core.ApplicationLayer.Queries.Handlers
                 .AsNoTracking()
                 .ToList();
 
-            // mapowanie obiektów biznesowych na transferowe warto powierzyć maperom 
-            // (własnym - jak tutaj lub bibliotecznym, np. Automaper)
             List<CarDto> result = cars.Select(r => this._mapper.Map(r)).ToList();
 
             return result;
@@ -57,7 +54,7 @@ namespace DDD.CarRental.Core.ApplicationLayer.Queries.Handlers
         {
             string sql =
                 $@"SELECT 
-                    r.RentalId, 
+                    r.Id, 
                     r.Started, 
                     r.Finished, 
                     r.Total_Currency,
@@ -66,9 +63,9 @@ namespace DDD.CarRental.Core.ApplicationLayer.Queries.Handlers
                     r.CarId, 
                 FROM Rentals r 
                 INNER JOIN Drivers d 
-                    ON r.DriverId = d.DriverId 
+                    ON r.DriverId = d.Id 
                 INNER JOIN Cars c 
-                    ON r.CarId = c.CarId";
+                    ON r.CarId = c.Id";
 
             var connectionString = _dbContext.Database.GetDbConnection().ConnectionString;
             using (SqliteConnection connection = new SqliteConnection(connectionString))
@@ -76,7 +73,6 @@ namespace DDD.CarRental.Core.ApplicationLayer.Queries.Handlers
                 var rentalViews = connection.Query<RentalDto>(sql)
                     .ToList();
 
-                // update TimeInMinutes
                 foreach (var r in rentalViews)
                 {
                     if (r.Finished.HasValue)
@@ -91,14 +87,12 @@ namespace DDD.CarRental.Core.ApplicationLayer.Queries.Handlers
         {
             Driver driver = _dbContext.Drivers
                 .AsNoTracking()
-                .Where(r => r.DriverId == query.DriverId)
+                .Where(r => r.Id == query.DriverId)
                 .FirstOrDefault();
 
             if (driver == null)
                 throw new Exception($"Could not find driver '{query.DriverId}'");
 
-            // mapowanie obiektów biznesowych na transferowe warto powierzyć maperom 
-            // (własnym - jak tutaj lub bibliotecznym, np. Automaper)
             DriverDto result = this._mapper.Map(driver);
 
             return result;
@@ -109,14 +103,12 @@ namespace DDD.CarRental.Core.ApplicationLayer.Queries.Handlers
         {
             Car car = _dbContext.Cars
                 .AsNoTracking()
-                .Where(r => r.CarId == query.CarId)
+                .Where(r => r.Id == query.CarId)
                 .FirstOrDefault();
 
             if (car == null)
                 throw new Exception($"Could not find car '{query.CarId}'");
 
-            // mapowanie obiektów biznesowych na transferowe warto powierzyć maperom 
-            // (własnym - jak tutaj lub bibliotecznym, np. Automaper)
             CarDto result = this._mapper.Map(car);
 
             return result;
@@ -147,7 +139,6 @@ namespace DDD.CarRental.Core.ApplicationLayer.Queries.Handlers
             {
                 var rentalDto = connection.QueryFirstOrDefault<RentalDto>(sql, new { visitId = query.RentalId });
 
-                // update TimeInMinutes
                 if (rentalDto.Finished.HasValue) rentalDto.TimeInMinutes = (rentalDto.Finished.Value - rentalDto.Started).Minutes;
 
                 return rentalDto;

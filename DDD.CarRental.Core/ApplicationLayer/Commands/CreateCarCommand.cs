@@ -1,15 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using DDD.CarRental.Core.DomainModelLayer.Models
+using DDD.CarRental.Core.DomainModelLayer.Models;
+
 
 namespace DDD.CarRental.Core.ApplicationLayer.Commands
 {
-   // public enum CarStatus
-    //{
-      //  Free = 1, // wolny
-     //   Taken = 0, // zajety
-    //}
+    public enum CarStatusCommand
+    {
+        Available = 0,
+        Reserved = 1,
+        Rented = 2
+    }
+
     public class CreateCarCommand
     {
         public long CarId { get; set; }

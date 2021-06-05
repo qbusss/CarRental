@@ -9,5 +9,6 @@ namespace DDD.CarRental.Core.ApplicationLayer.Commands
     {
         public long RentalId { get; set; }
         public DateTime Finished { get; set; }
+        public decimal UnitPrice { get; set; }
     }
 }
