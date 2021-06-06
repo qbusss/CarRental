@@ -25,3 +25,11 @@ C:\Users\ibm\Desktop\książki\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.
 C:\Users\ibm\Desktop\książki\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.csproj.CoreCompileInputs.cache
 C:\Users\ibm\Desktop\książki\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.dll
 C:\Users\ibm\Desktop\książki\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.pdb
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.SharedKernel\bin\Debug\netcoreapp3.1\DDD.SharedKernel.deps.json
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.SharedKernel\bin\Debug\netcoreapp3.1\DDD.SharedKernel.dll
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.SharedKernel\bin\Debug\netcoreapp3.1\DDD.SharedKernel.pdb
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.csprojAssemblyReference.cache
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.AssemblyInfoInputs.cache
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.AssemblyInfo.cs
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.dll
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.pdb

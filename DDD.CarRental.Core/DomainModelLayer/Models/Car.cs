@@ -20,6 +20,8 @@ namespace DDD.CarRental.Core.DomainModelLayer.Models
         public Position CurrentPosition { get; set; }
         public CarStatus Status { get; protected set; }
 
+        protected Car() { }
+
         public Car(long carId, string registrationNumber)
             : base(carId)
         {
@@ -39,6 +41,11 @@ namespace DDD.CarRental.Core.DomainModelLayer.Models
         public void ChangeStatus()
         {
             this.Status = CarStatus.Available;
+        }
+
+        public void EnterCar()
+        {
+            this.Status = CarStatus.Rented;
         }
 
         public void ChangeCurrentPosition(Position position)

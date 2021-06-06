@@ -16,11 +16,11 @@ namespace DDD.CarRental.Core.InfrastructureLayer.EF
             _context.SaveChanges();
         }
 
-        public Rental Get(long id)
-        {
-            return _context.Rentals
-                .Where(d => d.Id == id)
-                .FirstOrDefault();
-        }
+    //    public Rental Get(long id)
+       // {
+      //      return _context.Rentals
+       //         .Where(d => d.Id == id)
+       //         .FirstOrDefault();
+      //  }
     }
 }

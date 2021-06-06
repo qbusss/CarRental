@@ -9,8 +9,6 @@ namespace DDD.CarRental.Core.DomainModelLayer.Factories
         public IDiscountPolicy Create(Driver driver)
         {
             IDiscountPolicy policy = new StandardDiscountPolicy();
-            //if (driver.FirstName.Contains("a"))
-            //    policy = new VipDiscountPolicy();
 
             return policy;
         }

@@ -31,9 +31,9 @@ namespace DDD.CarRental.ConsoleTest
             string registrationNumber = "KR135X";
 
             long driver1Id = 11;
-            string licenceNumber1 = "L11";
+            long licenceNumber1 = 11;
             long driver2Id = 12;
-            string licenceNumber2 = "L12";
+            long licenceNumber2 = 12;
 
             long rental1Id = 1;
             long rental2Id = 2;

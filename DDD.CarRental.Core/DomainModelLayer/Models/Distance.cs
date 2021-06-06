@@ -15,6 +15,7 @@ namespace DDD.CarRental.Core.DomainModelLayer.Models
         public double Value { get; set; }
         public unit Unit { get; set; }
 
+
         public Distance()
         {
             this.Value = 0;

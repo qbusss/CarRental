@@ -22,3 +22,14 @@ C:\Users\ibm\Desktop\książki\CarRental\DDD.CarRental.Core\bin\Debug\netcoreapp
 C:\Users\ibm\Desktop\książki\CarRental\DDD.CarRental.Core\bin\Debug\netcoreapp3.1\DDD.SharedKernel.dll
 C:\Users\ibm\Desktop\książki\CarRental\DDD.CarRental.Core\bin\Debug\netcoreapp3.1\DDD.SharedKernel.pdb
 C:\Users\ibm\Desktop\książki\CarRental\DDD.CarRental.Core\obj\Debug\netcoreapp3.1\DDD.CarRental.Core.csproj.CopyComplete
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.CarRental.Core\bin\Debug\netcoreapp3.1\DDD.CarRental.Core.deps.json
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.CarRental.Core\bin\Debug\netcoreapp3.1\DDD.CarRental.Core.dll
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.CarRental.Core\bin\Debug\netcoreapp3.1\DDD.CarRental.Core.pdb
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.CarRental.Core\bin\Debug\netcoreapp3.1\DDD.SharedKernel.dll
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.CarRental.Core\bin\Debug\netcoreapp3.1\DDD.SharedKernel.pdb
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.CarRental.Core\obj\Debug\netcoreapp3.1\DDD.CarRental.Core.csprojAssemblyReference.cache
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.CarRental.Core\obj\Debug\netcoreapp3.1\DDD.CarRental.Core.AssemblyInfoInputs.cache
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.CarRental.Core\obj\Debug\netcoreapp3.1\DDD.CarRental.Core.AssemblyInfo.cs
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.CarRental.Core\obj\Debug\netcoreapp3.1\DDD.CarRental.Core.csproj.CopyComplete
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.CarRental.Core\obj\Debug\netcoreapp3.1\DDD.CarRental.Core.dll
+C:\Users\kubci\Desktop\projekty\CarRental\DDD.CarRental.Core\obj\Debug\netcoreapp3.1\DDD.CarRental.Core.pdb

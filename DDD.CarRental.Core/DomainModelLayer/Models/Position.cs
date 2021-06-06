@@ -9,6 +9,7 @@ namespace DDD.CarRental.Core.DomainModelLayer.Models
         public int X { get; set; }
         public int Y { get; set; }
 
+
         public Position(int x, int y)
         {
             this.X = x;
@@ -17,8 +18,18 @@ namespace DDD.CarRental.Core.DomainModelLayer.Models
 
         protected override IEnumerable<object> GetEqualityComponents()
         {
-            throw new NotImplementedException();
+            yield return X;
+            yield return Y;
 
+        }
+
+        public Distance CalculateDistance(Position p)
+        {
+            Distance d = new Distance();
+
+            d.Value = Math.Sqrt((this.X -p.X)^2 + (this.Y-p.Y)^2);
+
+            return d;
         }
     }
 

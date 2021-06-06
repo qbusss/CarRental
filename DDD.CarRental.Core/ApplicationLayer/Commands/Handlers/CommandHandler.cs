@@ -16,21 +16,21 @@ namespace DDD.CarRental.Core.ApplicationLayer.Commands.Handlers
     public class CommandHandler
     {
         private ICarRentalUnitOfWork _unitOfWork;
-        private DiscountPolicyFactory _discountPolicyFactory;
+       // private DiscountPolicyFactory _discountPolicyFactory;
         private RentalFactory _rentalFactory;
         private FreeMinutesPolicyFactory _freeMinutesFactory;
         private IPositionService _positionService;
 
         public CommandHandler(
             ICarRentalUnitOfWork unitOfWork, 
-            DiscountPolicyFactory discountPolicyFactory, 
+          //  DiscountPolicyFactory discountPolicyFactory, 
             RentalFactory rentalFactory,
             FreeMinutesPolicyFactory freeMinutesFactory,
             IPositionService positionService
         )
         {
             _unitOfWork = unitOfWork;
-            _discountPolicyFactory = discountPolicyFactory;
+         //   _discountPolicyFactory = discountPolicyFactory;
             _rentalFactory = rentalFactory;
             _freeMinutesFactory = freeMinutesFactory;
             _positionService = positionService;
@@ -75,8 +75,8 @@ namespace DDD.CarRental.Core.ApplicationLayer.Commands.Handlers
                 ?? throw new Exception($"Could not find driver '{command.DriverId}'.");
 
             Rental rental = this._rentalFactory.Create(command.RentalId, command.Started, driver, car);
-            IDiscountPolicy policy = this._discountPolicyFactory.Create(driver);
-            rental.RegisterPolicy(policy);
+            //IDiscountPolicy policy = this._discountPolicyFactory.Create(driver);
+            //rental.RegisterPolicy(policy);
 
             this._unitOfWork.RentalRepository.Insert(rental);
             this._unitOfWork.Commit();
@@ -97,7 +97,6 @@ namespace DDD.CarRental.Core.ApplicationLayer.Commands.Handlers
 
             IFreeMinutesPolicy policy = this._freeMinutesFactory.Create();
             driver.AddFreeMinutes(policy);
-
 
             rental.StopRental(command.Finished, command.UnitPrice, driver.FreeMinutes);
         }

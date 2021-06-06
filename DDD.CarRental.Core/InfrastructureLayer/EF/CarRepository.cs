@@ -12,15 +12,15 @@ namespace DDD.CarRental.Core.InfrastructureLayer.EF
             :base(context)
         { }
 
-        public Car Get(long id)
-        {
-            return _context.Cars
-                .Include(c => c.CurrentPosition)
-                .Include(c => c.CurrentDistance)
-                .Include(c => c.TotalDistance)
-                .Where(c => c.Id == id)
-                .FirstOrDefault();
-        }
+       // public Car Get(long id)
+       // {
+       //     return _context.Cars
+       //         .Include(c => c.CurrentPosition)
+       //         .Include(c => c.CurrentDistance)
+       //         .Include(c => c.TotalDistance)
+       //         .Where(c => c.Id == id)
+       //         .FirstOrDefault();
+        //}
 
         public Car GetCarByRegistrationNumber(string registrationNumber)
         {

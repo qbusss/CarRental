@@ -9,8 +9,6 @@ namespace DDD.CarRental.Core.DomainModelLayer.Factories
         public IFreeMinutesPolicy Create()
         {
             IFreeMinutesPolicy policy = new FreeMinutesPolicy();
-            //if (driver.FirstName.Contains("a"))
-            //    policy = new VipDiscountPolicy();
 
             return policy;
         }

@@ -10,12 +10,12 @@ namespace DDD.CarRental.Core.InfrastructureLayer.EF
             : base(context)
         { }
 
-        public Driver Get(long id)
-        {
-            return _context.Drivers
-                .Where(d => d.Id == id)
-                .FirstOrDefault();
-        }
+     //   public Driver Get(long id)
+       // {
+        //    return _context.Drivers
+        //        .Where(d => d.Id == id)
+        //        .FirstOrDefault();
+       // }
 
         public Driver GetDriverByLicenceNumber(long licenceNumber)
         {
