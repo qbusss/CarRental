@@ -1,3 +1,4 @@
+using DDD.SharedKernel.DomainModelLayer.Implementations;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +10,6 @@ namespace DDD.CarRental.Core.ApplicationLayer.Commands
     {
         public long RentalId { get; set; }
         public DateTime Finished { get; set; }
-        public decimal UnitPrice { get; set; }
+        public Money UnitPrice { get; set; }
     }
 }

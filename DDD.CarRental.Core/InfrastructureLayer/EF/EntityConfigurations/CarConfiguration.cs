@@ -25,7 +25,9 @@ namespace DDD.CarRental.Core.InfrastructureLayer.EF.EntityConfigurations
 
             // mechanizm OwnOne dodaje nowe pola do wyjściowej tabeli 
             // dla porównania zob. mapowanie dla klasy Score, która jest również typu Value object - tam jest tworzona nowa tabela
-            carConfiguration.OwnsOne(r => r.UnitPrice);
+            carConfiguration.OwnsOne(r => r.CurrentPosition);
+            carConfiguration.OwnsOne(c => c.TotalDistance);
+            carConfiguration.OwnsOne(c => c.CurrentDistance);
         }
     }
 }

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "6hnX6rLeEh+p8xDL0DjefM0J3z2zmAmD0Vjwu6VWMzHaTReDb96yjzsdWKo1754I/2GufgROO8fNIYhqp/VKqQ==",
+  "dgSpecHash": "2d5fJvueOpgTJj/kplXjSw3cmIyqvRLr2tqXg4a9Mk1+w+i2nI3Fo9Yzz7nRDgGaT8ngppppJX6kRCzQQXkiiQ==",
   "success": true,
-  "projectFilePath": "D:\\Dysk OneDrive\\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\\Student\\Wzorce projektowe\\CarRental\\DDD.SharedKernel\\DDD.SharedKernel.csproj",
+  "projectFilePath": "C:\\Users\\ibm\\Desktop\\książki\\CarRental\\DDD.SharedKernel\\DDD.SharedKernel.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Stanislaw\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
-    "C:\\Users\\Stanislaw\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
+    "C:\\Users\\ibm\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
+    "C:\\Users\\ibm\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

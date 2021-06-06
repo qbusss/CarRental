@@ -6,7 +6,7 @@ namespace DDD.CarRental.Core.DomainModelLayer.Interfaces
     public interface IDriverRepository : IRepository<Driver>
     {
         Driver Get(long Id);
-        Driver GetDriverByLicenceNumber(string licenceNumber);
+        Driver GetDriverByLicenceNumber(long licenceNumber);
     }
 
 }

@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\DDD.CarRental.Core",
+    "\\DDD.CarRental.Core\\DomainModelLayer",
+    "\\DDD.CarRental.Core\\DomainModelLayer\\Events"
+  ],
+  "SelectedNode": "\\DDD.CarRental.Core\\DomainModelLayer\\Events\\RentalStartedDomainEvent.cs",
+  "PreviewInSolutionExplorer": false
+}

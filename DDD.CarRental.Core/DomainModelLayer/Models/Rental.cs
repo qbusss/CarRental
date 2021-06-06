@@ -3,6 +3,7 @@ using DDD.SharedKernel.DomainModelLayer.Implementations;
 using DDD.CarRental.Core.DomainModelLayer.Interfaces;
 using System;
 using System.Collections.Generic;
+using DDD.CarRental.Core.DomainModelLayer.Events;
 
 namespace DDD.CarRental.Core.DomainModelLayer.Models
 {
@@ -10,7 +11,7 @@ namespace DDD.CarRental.Core.DomainModelLayer.Models
     {
 
         public DateTime Started { get; protected set; }
-        public DateTime Finished { get; protected set; }
+        public DateTime? Finished { get; protected set; }
         public Money Total { get; protected set; }
         public long CarId { get; protected set; }
         public long DriverId { get; protected set; }
@@ -36,7 +37,7 @@ namespace DDD.CarRental.Core.DomainModelLayer.Models
             this._policy = policy;// ?? throw new ArgumentNullException("Empty discount policy");
         }
 
-        public void StopRental(DateTime finished, Money unitPrice, int freeMinutes)
+        public void StopRental(DateTime finished, Money unitPrice, decimal freeMinutes)
         {
             if (finished < Started)
                 throw new Exception($"Finished date and time is earlier than startes date and time.");

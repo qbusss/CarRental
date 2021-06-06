@@ -6,19 +6,18 @@ using System.Text;
 
 namespace DDD.CarRental.Core.DomainModelLayer.Policies
 {
-    public class StandardDiscountPolicy : IFreeMinutesPolicy
+    public class FreeMinutesPolicy : IFreeMinutesPolicy
     {
-        public string Name { get; protected set; }
+       public string Name { get; protected set; }
 
-        public StandardDiscountPolicy()
+        public FreeMinutesPolicy()
         {
             this.Name = "Free minutes discount policy";
         }
 
-        public int CalculateDiscount(int numOfMinutes)
+        public decimal CalculateDiscount()
         {
-            decimal percent = 0.01;
-            return numOfMinutes*percent;
+            return 30;
         }
     }
 }

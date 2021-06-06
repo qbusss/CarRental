@@ -6,6 +6,6 @@ namespace DDD.CarRental.Core.DomainModelLayer.Interfaces
 {
     public interface IPositionService : IDomainService
     {
-        void GeneratePosition(long carId);
+        void GeneratePosition(long carId, Car car);
     }
 }

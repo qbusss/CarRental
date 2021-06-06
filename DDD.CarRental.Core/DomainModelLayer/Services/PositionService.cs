@@ -16,7 +16,7 @@ namespace DDD.CarRental.Core.DomainModelLayer.Services
             this._carRepository = carRepository;
         }
 
-        public void GeneratePosition(long carId)
+        public void GeneratePosition(long carId, Car car)
         {
             Random random = new Random();
 
@@ -25,7 +25,7 @@ namespace DDD.CarRental.Core.DomainModelLayer.Services
 
             Position position = new Position(x, y);
 
-            this._carRepository.ChangePosition(position, long carId);
+            this._carRepository.ChangePosition(position, carId);
 
             car.ChangeCurrentPosition(position);
         }

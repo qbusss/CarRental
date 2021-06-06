@@ -22,11 +22,11 @@ namespace DDD.CarRental.Core.ApplicationLayer.Commands.Handlers
         private IPositionService _positionService;
 
         public CommandHandler(
-            ICarRentalUnitOfWork _unitOfWork, 
+            ICarRentalUnitOfWork unitOfWork, 
             DiscountPolicyFactory discountPolicyFactory, 
             RentalFactory rentalFactory,
             FreeMinutesPolicyFactory freeMinutesFactory,
-            IPositionService positionService,
+            IPositionService positionService
         )
         {
             _unitOfWork = unitOfWork;
@@ -56,7 +56,12 @@ namespace DDD.CarRental.Core.ApplicationLayer.Commands.Handlers
             driver = this._unitOfWork.DriverRepository.GetDriverByLicenceNumber(command.LicenceNumber);
             if (driver != null) throw new Exception($"Driver '{command.LicenceNumber}' already exists.");
 
-            driver = new Driver(command.DriverId, command.LicenceNumber, command.FirstName, command.LastName, command.FreeMinutes);
+            driver = new Driver(
+                command.DriverId,
+                command.LicenceNumber, 
+                command.FirstName, 
+                command.LastName
+            );
 
             this._unitOfWork.DriverRepository.Insert(driver);
             this._unitOfWork.Commit();
@@ -88,11 +93,9 @@ namespace DDD.CarRental.Core.ApplicationLayer.Commands.Handlers
 
             car.ChangeStatus();
 
-           
-            // ToDo implement change position
-           _this._positionService.GeneratePosition(car.Id);
+           this._positionService.GeneratePosition(car.Id, car);
 
-            IFreeMinutesPolicy policy = this._freeMinutesFactory.Create(Driver driver);
+            IFreeMinutesPolicy policy = this._freeMinutesFactory.Create();
             driver.AddFreeMinutes(policy);
 
 

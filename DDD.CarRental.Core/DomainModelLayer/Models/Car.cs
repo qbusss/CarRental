@@ -1,5 +1,6 @@
 ﻿using DDD.SharedKernel.DomainModelLayer;
 using DDD.SharedKernel.DomainModelLayer.Implementations;
+using System;
 
 namespace DDD.CarRental.Core.DomainModelLayer.Models
 {
@@ -19,7 +20,7 @@ namespace DDD.CarRental.Core.DomainModelLayer.Models
         public Position CurrentPosition { get; set; }
         public CarStatus Status { get; protected set; }
 
-        public Car(long carId, string registrationNumber, Position position)
+        public Car(long carId, string registrationNumber)
             : base(carId)
         {
             if (String.IsNullOrEmpty(registrationNumber)) throw new Exception("Car registration number is null or empty");

@@ -1,5 +1,6 @@
 ﻿using DDD.CarRental.Core.DomainModelLayer.Interfaces;
 using DDD.CarRental.Core.DomainModelLayer.Models;
+using System.Linq;
 
 namespace DDD.CarRental.Core.InfrastructureLayer.EF
 {

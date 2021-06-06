@@ -6,7 +6,7 @@ namespace DDD.CarRental.Core.DomainModelLayer.Factories
 {
     public class FreeMinutesPolicyFactory
     {
-        public IFreeMinutesPolicy Create(Driver driver)
+        public IFreeMinutesPolicy Create()
         {
             IFreeMinutesPolicy policy = new FreeMinutesPolicy();
             //if (driver.FirstName.Contains("a"))

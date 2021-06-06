@@ -16,3 +16,12 @@ D:\Dysk OneDrive\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica
 D:\Dysk OneDrive\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Student\Wzorce projektowe\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.AssemblyInfo.cs
 D:\Dysk OneDrive\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Student\Wzorce projektowe\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.dll
 D:\Dysk OneDrive\OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie\Student\Wzorce projektowe\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.pdb
+C:\Users\ibm\Desktop\książki\CarRental\DDD.SharedKernel\bin\Debug\netcoreapp3.1\DDD.SharedKernel.deps.json
+C:\Users\ibm\Desktop\książki\CarRental\DDD.SharedKernel\bin\Debug\netcoreapp3.1\DDD.SharedKernel.dll
+C:\Users\ibm\Desktop\książki\CarRental\DDD.SharedKernel\bin\Debug\netcoreapp3.1\DDD.SharedKernel.pdb
+C:\Users\ibm\Desktop\książki\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.csproj.AssemblyReference.cache
+C:\Users\ibm\Desktop\książki\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.AssemblyInfoInputs.cache
+C:\Users\ibm\Desktop\książki\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.AssemblyInfo.cs
+C:\Users\ibm\Desktop\książki\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.csproj.CoreCompileInputs.cache
+C:\Users\ibm\Desktop\książki\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.dll
+C:\Users\ibm\Desktop\książki\CarRental\DDD.SharedKernel\obj\Debug\netcoreapp3.1\DDD.SharedKernel.pdb

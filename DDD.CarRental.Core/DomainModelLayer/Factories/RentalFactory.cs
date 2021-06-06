@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using DDD.CarRental.Core.DomainModelLayer.Models;
 //using DDD.CarRental.Core.DomainModelLayer.Models.Car;
-using DDD.CarRental.DomainModelLayer;
+using DDD.SharedKernel.DomainModelLayer;
 
 namespace DDD.CarRental.Core.DomainModelLayer.Factories
 {
@@ -21,14 +21,14 @@ namespace DDD.CarRental.Core.DomainModelLayer.Factories
         {
             CheckIfCarIsFree(car);
 
-            return new Rental(rentalId, driver.DriverId, car.CarId, started);
+            return new Rental(rentalId, driver.Id, car.Id, started);
         }
 
 
         private void CheckIfCarIsFree(Car car)
         {
-            if (car.Status != CarStatus.Free)
-                throw new Exception($"Car '{car.CarId}' is not free");
+            if (car.Status != CarStatus.Available)
+                throw new Exception($"Car '{car.Id}' is not free");
         }
     }
 }

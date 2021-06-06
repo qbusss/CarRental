@@ -1,5 +1,6 @@
 ﻿using DDD.CarRental.Core.DomainModelLayer.Interfaces;
 using DDD.CarRental.Core.DomainModelLayer.Models;
+using System.Linq;
 
 namespace DDD.CarRental.Core.InfrastructureLayer.EF
 {
@@ -9,14 +10,14 @@ namespace DDD.CarRental.Core.InfrastructureLayer.EF
             : base(context)
         { }
 
-        public Driver Get(long Id)
+        public Driver Get(long id)
         {
             return _context.Drivers
                 .Where(d => d.Id == id)
                 .FirstOrDefault();
         }
 
-        public Driver GetDriverByLicenceNumber(string licenceNumber)
+        public Driver GetDriverByLicenceNumber(long licenceNumber)
         {
             return _context.Drivers
                 .Where(d => d.LicenceNumber == licenceNumber)
